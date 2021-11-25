@@ -2,5 +2,5 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-cluster: "ecas2:cluster-1"
-slackurl: "https://hooks.slack.com/services/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"
+cluster: "cluster-1"
+slackurl: "https://hooks.slack.com/services/XXXX-XXXX-XXXX"
