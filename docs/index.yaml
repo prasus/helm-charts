@@ -3,7 +3,7 @@ entries:
   psmonit:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-11-25T10:17:31.194279058Z"
+    created: "2021-11-25T11:19:58.248474931Z"
     description: A helm chart for monitoring processes running inside pods, create
       slack alerts if it finds any unexpected processes
     digest: ec629a54be25860eaf4630faadced58aabe43f060db25547416541015ee77070
@@ -15,4 +15,4 @@ entries:
     urls:
     - https://github.com/prasus/helm-charts/psmonit-1.0.0.tgz
     version: 1.0.0
-generated: "2021-11-25T10:17:31.191053777Z"
+generated: "2021-11-25T11:19:58.24656488Z"
