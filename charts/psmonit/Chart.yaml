@@ -2,8 +2,8 @@ apiVersion: v2
 name: psmonit
 description: A helm chart for monitoring processes running inside pods, create slack alerts if it finds any unexpected processes
 type: application
-version: 1.0.1
-appVersion: "1.0.1"
+version: 1.0.0
+appVersion: "1.0.0"
 maintainers:
   - name: Prasad Krishnan
     email: prasus@gmail.com
