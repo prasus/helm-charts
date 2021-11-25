@@ -3,7 +3,7 @@ name: Release Charts
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   release:
@@ -14,12 +14,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Configure Git
-        run: |
-          git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-
-      - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.1.0
-        env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Publish Helm charts
+        uses: stefanprodan/helm-gh-pages@v1.4.1
+        with:
+          token: ${{ secrets.CR_TOKEN }}
+          charts_dir: charts
+          
+          
