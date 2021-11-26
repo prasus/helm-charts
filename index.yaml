@@ -1,12 +1,44 @@
 apiVersion: v1
 entries:
+  haproxy:
+  - annotations:
+      category: Infrastructure
+    apiVersion: v2
+    appVersion: 2.5.0
+    created: "2021-11-26T02:49:49.621556909Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: HAProxy is a TCP proxy and a HTTP reverse proxy. It supports SSL
+      termination and offloading, TCP and HTTP normalization, traffic regulation,
+      caching and protection against DDoS attacks.
+    digest: 727f03d9bd7a469022ae3193b1e80997edd25e690705675c4fbdabc9c267abfa
+    home: http://www.haproxy.org/
+    icon: https://bitnami.com/assets/stacks/haproxy/img/haproxy-stack-220x234.png
+    keywords:
+    - haproxy
+    - proxy
+    - infrastructure
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: haproxy
+    sources:
+    - https://github.com/bitnami/bitnami-docker-haproxy
+    - https://github.com/haproxytech/haproxy
+    urls:
+    - https://prasus.github.io/helm-charts/haproxy-0.2.18.tgz
+    version: 0.2.18
   psmonit:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-11-25T17:55:41.091597403Z"
+    created: "2021-11-26T02:49:49.621860813Z"
     description: A helm chart for monitoring processes running inside pods, create
       slack alerts if it finds any unexpected processes
-    digest: 24ab1731134a828e65f0a1ede119b6c1dcded13c1571b755c18ca2d99d58baf7
+    digest: 5b1f006e25374084efe0c57435dbf35ea7c6b184dfc8b04bd29928f560f8fd7a
     maintainers:
     - email: prasus@gmail.com
       name: Prasad Krishnan
@@ -15,4 +47,4 @@ entries:
     urls:
     - https://prasus.github.io/helm-charts/psmonit-1.0.0.tgz
     version: 1.0.0
-generated: "2021-11-25T17:55:41.091089896Z"
+generated: "2021-11-26T02:49:49.618672678Z"
