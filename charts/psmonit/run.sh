@@ -8,7 +8,7 @@ do
     
     for pod in $(cat /tmp/pods.running)
     do
-        kubectl -n $namespace exec -it $pod -- ps -eo comm | grep -Evi 'command|ps|grep' > /tmp/process.list
+        kubectl -n $namespace exec -i $pod -- ps -eo comm | grep -Evi 'command|ps|grep' > /tmp/process.list
         process_count=$(wc -l /tmp/process.list | cut -d' ' -f1)
         if [ $process_count -gt 5 ]
         then
