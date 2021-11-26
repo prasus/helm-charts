@@ -5,7 +5,7 @@ entries:
       category: Infrastructure
     apiVersion: v2
     appVersion: 2.5.0
-    created: "2021-11-26T04:24:52.612241199Z"
+    created: "2021-11-26T17:05:45.468710034Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -15,7 +15,7 @@ entries:
     description: HAProxy is a TCP proxy and a HTTP reverse proxy. It supports SSL
       termination and offloading, TCP and HTTP normalization, traffic regulation,
       caching and protection against DDoS attacks.
-    digest: 3b3cd6f315ca11ec0693f99138f2e75b7a39ab0910e0aac696bfc18c0dd64207
+    digest: fdfd5486aa0037d76aa028f16602af69c5d3bee61253def3f09e376e2e695fcc
     home: http://www.haproxy.org/
     icon: https://bitnami.com/assets/stacks/haproxy/img/haproxy-stack-220x234.png
     keywords:
@@ -35,7 +35,21 @@ entries:
   psmonit:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-11-26T04:24:52.612551312Z"
+    created: "2021-11-26T17:05:45.469355251Z"
+    description: A helm chart for monitoring processes running inside pods, create
+      slack alerts if it finds any unexpected processes
+    digest: de8b3f02444bd0d8caa3b6c0d6408aa3b92ea8399f378229aef7d18251b61177
+    maintainers:
+    - email: prasus@gmail.com
+      name: Prasad Krishnan
+    name: psmonit
+    type: application
+    urls:
+    - https://prasus.github.io/helm-charts/psmonit-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-11-26T17:05:45.469046643Z"
     description: A helm chart for monitoring processes running inside pods, create
       slack alerts if it finds any unexpected processes
     digest: 9df178c69a865b1c180bb1cc210c65c36ac0f22afb3a0893095d2f21e1c8a47d
@@ -50,9 +64,9 @@ entries:
   sealed-secrets:
   - apiVersion: v2
     appVersion: v0.16.0
-    created: "2021-11-26T04:24:52.613447951Z"
+    created: "2021-11-26T17:05:45.470821589Z"
     description: Helm chart for the sealed-secrets controller.
-    digest: cf437b3bebc2189027c3f2578bf2e505b10d877d6ec949e5dc2b8fa840168551
+    digest: 323a2fe3b729c3ba1fda6456183d567842c069af0e3ac7b31955bdaccb1a8d4a
     home: https://github.com/bitnami-labs/sealed-secrets
     icon: https://avatars0.githubusercontent.com/u/34656521?s=200&v=4
     kubeVersion: '>=1.16.0-0'
@@ -64,4 +78,4 @@ entries:
     urls:
     - https://prasus.github.io/helm-charts/sealed-secrets-1.16.1.tgz
     version: 1.16.1
-generated: "2021-11-26T04:24:52.608925555Z"
+generated: "2021-11-26T17:05:45.465807159Z"
