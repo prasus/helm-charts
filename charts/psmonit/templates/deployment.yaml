@@ -34,7 +34,7 @@ spec:
             - name: "processlist"
               value: {{ required "process list is required, eg: bash|tini|netpyne"  .Values.processlist }}
             - name: "processcount"
-              value: {{ required "process count is required"  .Values.processcount }}
+              value: {{ required "process count is required"  .Values.processcount | quote }}
           volumeMounts:
             - name: monitor-script
               mountPath: /monitor-script
