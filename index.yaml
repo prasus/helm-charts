@@ -5,7 +5,7 @@ entries:
       category: Infrastructure
     apiVersion: v2
     appVersion: 2.5.0
-    created: "2021-12-16T09:23:41.821068362Z"
+    created: "2021-12-16T10:55:50.139542283Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -15,7 +15,7 @@ entries:
     description: HAProxy is a TCP proxy and a HTTP reverse proxy. It supports SSL
       termination and offloading, TCP and HTTP normalization, traffic regulation,
       caching and protection against DDoS attacks.
-    digest: f3d64ffdc285482aa217500428c0dd97a69f0b49e64e067be158e9beaf259d32
+    digest: 8ddd21eabad0a6c33cd99a83dd4544c1d2f1455df8c5a8a47c75a9159ebfd746
     home: http://www.haproxy.org/
     icon: https://bitnami.com/assets/stacks/haproxy/img/haproxy-stack-220x234.png
     keywords:
@@ -35,7 +35,21 @@ entries:
   psmonit:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-12-16T09:23:41.821953048Z"
+    created: "2021-12-16T10:55:50.141676703Z"
+    description: A helm chart for monitoring processes running inside pods, create
+      slack alerts if it finds any unexpected processes
+    digest: cd199e3cc68217f7d99692a967769a438cdc8867fb5e6a299baebfb6423e5a75
+    maintainers:
+    - email: prasus@gmail.com
+      name: Prasad Krishnan
+    name: psmonit
+    type: application
+    urls:
+    - https://prasus.github.io/helm-charts/psmonit-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-12-16T10:55:50.140965596Z"
     description: A helm chart for monitoring processes running inside pods, create
       slack alerts if it finds any unexpected processes
     digest: 9c09e9d0059f39035dfc0b971ad1f0b187c77780588a3d44840a9766ad51686f
@@ -49,7 +63,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-12-16T09:23:41.821647552Z"
+    created: "2021-12-16T10:55:50.140479692Z"
     description: A helm chart for monitoring processes running inside pods, create
       slack alerts if it finds any unexpected processes
     digest: de8b3f02444bd0d8caa3b6c0d6408aa3b92ea8399f378229aef7d18251b61177
@@ -63,7 +77,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-12-16T09:23:41.821373457Z"
+    created: "2021-12-16T10:55:50.140017287Z"
     description: A helm chart for monitoring processes running inside pods, create
       slack alerts if it finds any unexpected processes
     digest: 9df178c69a865b1c180bb1cc210c65c36ac0f22afb3a0893095d2f21e1c8a47d
@@ -78,9 +92,9 @@ entries:
   sealed-secrets:
   - apiVersion: v2
     appVersion: v0.16.0
-    created: "2021-12-16T09:23:41.823279526Z"
+    created: "2021-12-16T10:55:50.142643612Z"
     description: Helm chart for the sealed-secrets controller.
-    digest: fba89c34028594ecdbaef6bd53e9b30150bdc568c4ce2aec2408159c929f6523
+    digest: 2d75b82e3aefd0c60e22409ced0feb8fcd5c9fecf9ce009e997f6dc71eaed7df
     home: https://github.com/bitnami-labs/sealed-secrets
     icon: https://avatars0.githubusercontent.com/u/34656521?s=200&v=4
     kubeVersion: '>=1.16.0-0'
@@ -92,4 +106,4 @@ entries:
     urls:
     - https://prasus.github.io/helm-charts/sealed-secrets-1.16.1.tgz
     version: 1.16.1
-generated: "2021-12-16T09:23:41.81807381Z"
+generated: "2021-12-16T10:55:50.135609347Z"
