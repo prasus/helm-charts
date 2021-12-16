@@ -4,3 +4,5 @@
 
 cluster: "cluster-1"
 slackurl: "https://hooks.slack.com/services/XXXX-XXXX-XXXX"
+processlist: "tini|python|bash|netpyne"
+processcount: 5

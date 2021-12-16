@@ -26,11 +26,15 @@ spec:
           command: ["/monitor-script/run.sh"]
           env:
             - name: "cluster"
-              value: {{ .Values.cluster }} 
+              value: {{ required "Name of the cluster is required" .Values.cluster }}
             - name: "slackurl"
-              value: {{ .Values.slackurl }} 
+              value: {{ required "Slack webhook url is required"  .Values.slackurl }}
             - name: "namespace"
-              value: {{ .Values.ns | default "netpyne" }} 
+              value: {{ .Values.ns | default "netpyne" }}
+            - name: "processlist"
+              value: {{ required "process list is required, eg: bash|tini|netpyne"  .Values.processlist }}
+            - name: "processcount"
+              value: {{ required "process count is required"  .Values.processcount }}
           volumeMounts:
             - name: monitor-script
               mountPath: /monitor-script
