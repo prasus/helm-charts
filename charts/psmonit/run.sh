@@ -1,7 +1,7 @@
 #!/bin/bash
 while [ 1 ];
 do
-    namespace=netpyne
+    namespace=$namespace
     webhookURL=$slackurl
     pscount=$processcount
     pslist=$processlist

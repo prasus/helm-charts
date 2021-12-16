@@ -30,7 +30,7 @@ spec:
             - name: "slackurl"
               value: {{ required "Slack webhook url is required"  .Values.slackurl }}
             - name: "namespace"
-              value: {{ .Values.ns | default "netpyne" }}
+              value: {{ required "Jupyter deployment namespace is required"  .Values.ns }}
             - name: "processlist"
               value: {{ required "process list is required, eg: bash|tini|netpyne"  .Values.processlist }}
             - name: "processcount"
