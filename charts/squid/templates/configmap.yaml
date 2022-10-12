@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "squid.fullname" . }}
+  labels:
+    app: {{ template "squid.name" . }}
+    chart: {{ template "squid.chart" . }}
+    release: {{ .Release.Name }}
+data:
+  squid: |
+    # Browsing allowed from these networks
+    acl localnet src 10.0.0.0/8             # K8s netwok cidr 
+    acl localnet src 127.0.0.1
+    # An ACL named 'allowed_sites'
+    acl allowed_sites dstdomain {{ join " " .Values.proxy.domains }}
+    acl SSL_ports port 443
+    acl Safe_ports port 80          # http
+    acl Safe_ports port 21          # ftp
+    acl Safe_ports port 443         # https
+    acl Safe_ports port 1025-65535  # unregistered ports
+    acl CONNECT method CONNECT
+    http_access deny !Safe_ports
+    http_access deny CONNECT !SSL_ports
+    http_access allow localhost manager
+    http_access deny manager
+    http_access allow allowed_sites 
+    http_access allow localhost
+    http_access allow localnet
+    http_access deny all
+    http_port 3128
+    coredump_dir /var/spool/squid
+    refresh_pattern ^ftp:           1440    20%     10080
+    refresh_pattern ^gopher:        1440    0%      1440
+    refresh_pattern -i (/cgi-bin/|\?) 0     0%      0
+    refresh_pattern \/(Packages|Sources)(|\.bz2|\.gz|\.xz)$ 0 0% 0 refresh-ims
+    refresh_pattern \/Release(|\.gpg)$ 0 0% 0 refresh-ims
+    refresh_pattern \/InRelease$ 0 0% 0 refresh-ims
+    refresh_pattern \/(Translation-.*)(|\.bz2|\.gz|\.xz)$ 0 0% 0 refresh-ims
+    refresh_pattern .               0       20%     4320
+    logfile_rotate 0

@@ -1,0 +1,12 @@
+# Default values for squid proxy
+
+proxy:
+  domains:
+    - .metacell.us
+    - .github.com
+    - .pypa.io 
+    - .python.org 
+    - .pypi.org 
+    - .pythonhosted.org
+
+resources: {}

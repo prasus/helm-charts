@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "squid.fullname" . }}
+  labels:
+    app: {{ template "squid.name" . }}
+    chart: {{ template "squid.chart" . }}
+    release: {{ .Release.Name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ template "squid.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "squid.name" . }}
+        release: {{ .Release.Name }}
+      annotations:
+        # autorestart when the configuration changes!
+        checksum/config-map: {{ include (print .Template.BasePath "/configmap.yaml") . | sha256sum }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: ubuntu/squid:edge
+          imagePullPolicy: Always 
+          ports:
+          - containerPort: 3128
+            name: squid
+            protocol: TCP
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+          volumeMounts:
+          - name: squid-config-volume
+            mountPath: /etc/squid/squid.conf
+            subPath: squid.conf
+          - name: squid-data
+            mountPath: /var/spool/squid
+      volumes:
+        - name: squid-config-volume
+          configMap:
+            name: {{ template "squid.fullname" . }}
+            items:
+            - key: squid
+              path: squid.conf
+        - name: squid-data
+          persistentVolumeClaim:
+            claimName: {{ template "squid.fullname" . }}-pvc 

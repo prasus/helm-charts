@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ template "squid.fullname" . }}-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: {{ .Values.replicaCounti | default "standard" | quote }}
+  resources:
+    requests:
+      storage: 500M
