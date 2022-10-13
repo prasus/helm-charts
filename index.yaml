@@ -5,7 +5,7 @@ entries:
       category: Infrastructure
     apiVersion: v2
     appVersion: 2.5.0
-    created: "2022-10-12T12:33:24.972625199Z"
+    created: "2022-10-13T01:54:49.409147011Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -15,7 +15,7 @@ entries:
     description: HAProxy is a TCP proxy and a HTTP reverse proxy. It supports SSL
       termination and offloading, TCP and HTTP normalization, traffic regulation,
       caching and protection against DDoS attacks.
-    digest: bc8582808a900ff2f205d9b898f6d5a2e7786b26ccccfd44bb55ffb020ff2624
+    digest: f2517ab4ce9ca1a07ad32d31139b32ee8e9df7b68df3ffb05abb0eecdadd07fe
     home: http://www.haproxy.org/
     icon: https://bitnami.com/assets/stacks/haproxy/img/haproxy-stack-220x234.png
     keywords:
@@ -35,10 +35,10 @@ entries:
   psmonit:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-10-12T12:33:24.974151932Z"
+    created: "2022-10-13T01:54:49.41088554Z"
     description: A helm chart for monitoring processes running inside pods, create
       slack alerts if it finds any unexpected processes
-    digest: c2b9b45b6c0eae50663538fb53074645d72b0a14b9acef656872f9f7a697d5f9
+    digest: 316d5dabb17afcd2cc2860ca65fbf31377ccece537a1a3172eb7476a581febc5
     maintainers:
     - email: prasus@gmail.com
       name: Prasad Krishnan
@@ -49,7 +49,7 @@ entries:
     version: 1.0.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-10-12T12:33:24.973780724Z"
+    created: "2022-10-13T01:54:49.410093027Z"
     description: A helm chart for monitoring processes running inside pods, create
       slack alerts if it finds any unexpected processes
     digest: 9c09e9d0059f39035dfc0b971ad1f0b187c77780588a3d44840a9766ad51686f
@@ -63,7 +63,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-10-12T12:33:24.973430917Z"
+    created: "2022-10-13T01:54:49.409776421Z"
     description: A helm chart for monitoring processes running inside pods, create
       slack alerts if it finds any unexpected processes
     digest: de8b3f02444bd0d8caa3b6c0d6408aa3b92ea8399f378229aef7d18251b61177
@@ -77,7 +77,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-10-12T12:33:24.973052708Z"
+    created: "2022-10-13T01:54:49.409487117Z"
     description: A helm chart for monitoring processes running inside pods, create
       slack alerts if it finds any unexpected processes
     digest: 9df178c69a865b1c180bb1cc210c65c36ac0f22afb3a0893095d2f21e1c8a47d
@@ -92,9 +92,9 @@ entries:
   sealed-secrets:
   - apiVersion: v2
     appVersion: v0.16.0
-    created: "2022-10-12T12:33:24.975125753Z"
+    created: "2022-10-13T01:54:49.411707553Z"
     description: Helm chart for the sealed-secrets controller.
-    digest: 6a33611b879db7a1e568dbd124f1c312cb162dd1603e2c0acb5eac50a926e5f8
+    digest: 9f4dc785263d3385c0db46dd8f52af2ff830916818c7cb88e287df91f2ad2d6a
     home: https://github.com/bitnami-labs/sealed-secrets
     icon: https://avatars0.githubusercontent.com/u/34656521?s=200&v=4
     kubeVersion: '>=1.16.0-0'
@@ -109,12 +109,12 @@ entries:
   squid:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-10-12T12:33:24.97545916Z"
+    created: "2022-10-13T01:54:49.411957657Z"
     description: A Helm chart for deploying squid proxy server in kubernetes
-    digest: c92d7e783bf035a68b117d52b89222b6896f3963451984f391e851c78c7a79eb
+    digest: 5181bf5ecd856a9f886de67004e030207c4cc75515cebb9f7f168d4c8067ad0c
     name: squid
     type: application
     urls:
     - https://prasus.github.io/helm-charts/squid-1.0.0.tgz
     version: 1.0.0
-generated: "2022-10-12T12:33:24.967432387Z"
+generated: "2022-10-13T01:54:49.406143262Z"
